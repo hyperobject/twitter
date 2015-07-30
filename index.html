@@ -1,0 +1,83 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Scratch Twitter Extension</title>
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/fancybox/jquery.fancybox.js"></script>
+  <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css" />
+</head>
+<body>
+
+<div id="header-container">
+  <header>
+    <h1>Scratch Twitter Extension</h1>
+  </header>
+</div>
+
+<div id="content-container">
+
+  <h1>Contents</h1>
+
+  <ul id="nav">
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#blocks">Scratch Blocks</a></li>
+    <li><a href="#examples">Example Projects</a></li>
+  </ul>
+
+  <a name="intro" />
+  <h1>Introduction</h1>
+
+  <p>This <a href="https://scratch.mit.edu">Scratch</a> extension lets you search for new and popular tweets using the <a target="_new" href="https://dev.twitter.com/overview/documentation">Twitter API</a>.</p>
+
+  <a href="res/screenshot1.png" class="fancybox" rel="screenshot-gallery"><img class="thumbnail" src="res/screenshot1.png" /></a>
+  <a href="res/screenshot2.png" class="fancybox" rel="screenshot-gallery"><img class="thumbnail" src="res/screenshot2.png" /></a>
+  <br />
+  <i>Example project that fetches a tweet when the bird is clicked</i>
+
+  <a name="getting-started" />
+  <h1>Getting Started</h1>
+
+  <p>All you need to use the Twitter extension is an active internet connection.</p>
+
+  <a target="_new" href="http://scratchx.org/?url=https://technoboy10.github.io/twitter/extension.js">Load the Twitter extension on ScratchX</a>
+  
+  <a name="blocks" />
+  <h1>Scratch Blocks</h1>
+  <p>This is a brief description of each of the Scratch blocks included with the Twitter extension.</p>
+  <br />
+
+  <div class="block">
+  <img height="40" src="res/latesttweet.png" />
+  <p>Enter a Twitter handle to get their most recent tweet.</p>
+  </div>
+
+  <hr />
+
+  <div class="block">
+  <img height="40" src="res/toptweet.png" />
+  <p>Get the most popular or most recent tweet containing a word, hashtag, or Twitter handle.</p>
+  </div>
+
+  <a name="examples" />
+  <h1>Example Projects</h1>
+
+  <dl>
+    <dt><a target="_new" href="http://scratchx.org/?url=http://technoboy10.github.io/twitter/examples/Fetch%20a%20Tweet.sbx">Fetch a tweet</a></dt>
+    <dd>Click the Twitter bird to search for a popular tweet.</dd>
+  </dl>
+
+</div>
+
+<br />
+
+<script>
+  $(document).ready(function() {
+    $('.fancybox').fancybox();
+  });
+</script>
+
+</body>
+</html>
