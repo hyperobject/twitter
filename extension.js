@@ -24,7 +24,11 @@
       },
       dataType: "json",
       success: function(data) {
-        callback(data[0].text);
+        if (data.length > 0) {
+          callback(data[0].text);
+          return;
+        }
+        callback("No tweets found");
       },
       error: function(xhr, textStatus, error) {
         console.log(error);
@@ -44,7 +48,11 @@
       },
       dataType: "json",
       success: function(data) {
-        callback(data.statuses[0].text);
+        if (data.statuses.length > 0) {
+          callback(data.statuses[0].text);
+          return;
+        }
+        callback("No tweets found");
       },
       error: function(xhr, textStatus, error) {
         console.log(error);
