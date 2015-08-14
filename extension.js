@@ -41,6 +41,10 @@
     $.ajax({
       method: "GET",
       url: "http://scratchx-twitter.herokuapp.com/1.1/search/tweets.json",
+      if (sort == "popular") {
+        str = str.replace('#', '');
+        str = str.replace('@', '');
+      }
       data: {
         q: encodeURIComponent(str),
         result_type: sort,
