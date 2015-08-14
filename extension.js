@@ -38,6 +38,9 @@
   };
 
   ext.getTopTweet = function(sort, str, callback) {
+    //If searching popluar, remove # and @ symbols from query
+    if (sort === "popular")
+      str = str.replace('#','').replace('@','');
     $.ajax({
       method: "GET",
       url: "http://scratchx-twitter.herokuapp.com/1.1/search/tweets.json",
